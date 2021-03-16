@@ -29,7 +29,6 @@ class Main
     public function endBatch() {
       $consignments = $this->consignmentBatch->getConsignments();
       foreach ($consignments as $consignment) {
-        // print("[" . $consignment->getNumber() . "] " . $consignment->getItemDescriptor() . " To be shipped via " . $consignment->getCourier() . "<br>");
         $consignment->sendConsignment();
       }
     }
