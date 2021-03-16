@@ -3,7 +3,10 @@
   namespace App\Couriers;
   use App\Consignment;
 
-class Courier
+  /**
+   * Class for defining a base Courier, should be extended by actual couriers.
+   */
+  class Courier
   {
     /** @var string|null $courierName contains a user-friendly representation of the Courier's name. */
     protected $courierName = null;
