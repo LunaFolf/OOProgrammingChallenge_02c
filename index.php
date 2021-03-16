@@ -1,3 +1,5 @@
 <?php
+  echo "*Trumpet Sound*";
+?>
 
-echo "done";
+<h1>Hi :3</h1>
