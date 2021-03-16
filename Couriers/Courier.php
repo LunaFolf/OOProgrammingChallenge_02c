@@ -31,11 +31,12 @@ class Courier
       return "TBC";
     }
 
-    private function sendConsignment(Consignment $consignment) {
-      switch ($this->transportMethod) {
-        default:
-          throw new \Exception("No Data Transport Method has been set for $this->courierName.");
+    public function sendConsignment(Consignment $consignment) {
+      if (!$this->transportMethod) {
+        throw new \Exception("No Data Transport Method has been set for $this->courierName.");
       }
+
+      print("Queueing Job to send <b>[" . $consignment->getNumber() . "] " . $consignment->getItemDescriptor() . "</b> via <b>" . $this->transportMethod . "</b><br>");
     }
   }
 

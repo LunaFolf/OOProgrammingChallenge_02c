@@ -12,7 +12,7 @@
     /** Generate a ANC consignment number
      */
     public function generateConsignmentNumber() {
-      return ("ANC" . rand([1, 1000]));
+      return ("ANC" . rand(0, 1000));
     }
   }
 

@@ -12,7 +12,7 @@
     /** Generate a Royal Mail consignment number
      */
     public function generateConsignmentNumber() {
-      return ("RM" . rand([1, 1000]));
+      return ("RM" . rand(0, 1000));
     }
   }
 
