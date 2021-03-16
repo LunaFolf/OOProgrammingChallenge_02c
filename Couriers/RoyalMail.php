@@ -5,15 +5,14 @@
   class RoyalMail extends Courier
   {
     public function __construct() {
+      $this->setCourierName("Royal Mail");
       $this->setTransportMethod("email");
     }
 
-    /**
-     * Overwriting the generateConsignmentNumber code for specific RoyalMail Generation.
+    /** Generate a Royal Mail consignment number
      */
     public function generateConsignmentNumber() {
-      
+      return ("RM" . rand([1, 1000]));
     }
   }
 
-?>

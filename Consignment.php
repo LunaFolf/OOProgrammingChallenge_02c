@@ -1,16 +1,16 @@
 <?php
+  namespace App;
 
-class Consigment
-{
-
-  public $number;
-  public $courier;
-
-  public function __construct($courier)
+  class Consignment
   {
-    $this->number = $courier->generateConsignmentNumber();
+
+    public $number;
+    public $courier;
+
+    public function __construct($courier)
+    {
+      $this->number = $courier->generateConsignmentNumber();
+    }
+
   }
 
-}
-
-?>
